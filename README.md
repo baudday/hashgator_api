@@ -1,8 +1,12 @@
 # Installation
 
 In top-most dir
-* `$ virtualenv venv`
-* `$ . venv/bin/activate`
+```bash
+$ virtualenv venv
+$ . venv/bin/activate
+```
 
 # Run server
-* `$ python runserver.py`
+```bash
+$ python runserver.py
+```
