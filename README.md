@@ -6,6 +6,7 @@ $ virtualenv venv
 $ . venv/bin/activate
 $ pip install flask-restful
 $ pip install Flask-SQLAlchemy
+$ pip install -U marshmallow
 ```
 
 # Run server
