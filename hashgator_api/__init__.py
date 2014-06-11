@@ -3,7 +3,7 @@ from flask.ext import restful
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:baseba77@localhost/hashgator'
 db = SQLAlchemy(app)
 api = restful.Api(app)
 
