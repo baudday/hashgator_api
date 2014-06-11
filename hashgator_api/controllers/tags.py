@@ -12,13 +12,11 @@ parser = reqparse.RequestParser()
 class Tags (restful.Resource):
   def get(self, tag=False):
     if(tag):
-      tags = Tag.query.filter_by(tag=tag).first()
-      many = False
+      tags = Tag.query.filter(Tag.tag.contains(tag)).all()
     else:
       tags = Tag.query.all()
-      many = True
 
-    return TagSerializer(tags, many=many).data, 200
+    return TagSerializer(tags, many=True).data, 200
 
   def post(self):
     parser.add_argument('tag', type=str)
