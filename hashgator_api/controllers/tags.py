@@ -12,9 +12,9 @@ parser = reqparse.RequestParser()
 class Tags (restful.Resource):
   def get(self, tag=False):
     if(tag):
-      tags = Tag.query.filter(Tag.tag.contains(tag)).all()
+      tags = Tag.query.filter(Tag.tag.contains(tag)).order_by(Tag.tag).all()
     else:
-      tags = Tag.query.all()
+      tags = Tag.query.order_by(Tag.tag).all()
 
     return TagSerializer(tags, many=True).data, 200
 
