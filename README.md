@@ -10,7 +10,7 @@ $ pip install -U marshmallow
 
 # For Postgres support
 $ sudo apt-get build-dep python-psycopg2
-$ pip install psycopg2 # for postgres support
+$ pip install psycopg2
 ```
 
 # Run server
